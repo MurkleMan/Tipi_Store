@@ -5,22 +5,25 @@
       "image": "node:18-alpine",
       "isMain": true,
       "internalPort": 5173,
-      "command": "sh -c 'apk add --no-cache git && npm install -g pnpm && git clone https://github.com/stackblitz-labs/bolt.diy.git /app && cd /app && pnpm install && pnpm run dev --host'",
+      "command": [
+        "sh",
+        "-c",
+        "apk add --no-cache git && npm install -g pnpm && git clone -b stable https://github.com/stackblitz-labs/bolt.diy.git /app && cd /app && pnpm install && pnpm run dev --host 0.0.0.0"
+      ],
       "volumes": [
         {
           "hostPath": "${APP_DATA_DIR}/data",
           "containerPath": "/app/data"
         }
       ],
-      "environment": [
-        "OPENAI_API_KEY=${OPENAI_API_KEY:-}",
-        "ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY:-}",
-        "OLLAMA_BASE_URL=${OLLAMA_BASE_URL:-}",
-        "OPENROUTER_API_KEY=${OPENROUTER_API_KEY:-}",
-        "GEMINI_API_KEY=${GEMINI_API_KEY:-}",
-        "NODE_ENV=production"
-      ],
-      "dependsOn": []
+      "environment": {
+        "OPENAI_API_KEY": "${OPENAI_API_KEY:-}",
+        "ANTHROPIC_API_KEY": "${ANTHROPIC_API_KEY:-}",
+        "OLLAMA_BASE_URL": "${OLLAMA_BASE_URL:-}",
+        "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY:-}",
+        "GEMINI_API_KEY": "${GEMINI_API_KEY:-}",
+        "NODE_ENV": "production"
+      }
     }
   ]
 }
