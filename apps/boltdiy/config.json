@@ -1,0 +1,62 @@
+{
+  "name": "Bolt.DIY",
+  "available": true,
+  "port": 5173,
+  "exposable": true,
+  "dynamic_config": true,
+  "id": "bolt-diy",
+  "description": "AI-powered full-stack web development platform that allows you to prompt, run, edit, and deploy web applications using multiple LLM providers including OpenAI, Anthropic, Ollama, and more.",
+  "tipi_version": 4,
+  "version": "1.0.0",
+  "categories": ["development", "ai"],
+  "short_desc": "Open-source AI coding assistant with multi-LLM support",
+  "author": "StackBlitz Labs",
+  "source": "https://github.com/stackblitz-labs/bolt.diy",
+  "website": "https://stackblitz-labs.github.io/bolt.diy/",
+  "form_fields": [
+    {
+      "type": "text",
+      "label": "OpenAI API Key",
+      "placeholder": "sk-...",
+      "hint": "Optional: Your OpenAI API key for GPT models",
+      "required": false,
+      "env_variable": "OPENAI_API_KEY"
+    },
+    {
+      "type": "text",
+      "label": "Anthropic API Key",
+      "placeholder": "sk-ant-...",
+      "hint": "Optional: Your Anthropic API key for Claude models",
+      "required": false,
+      "env_variable": "ANTHROPIC_API_KEY"
+    },
+    {
+      "type": "text",
+      "label": "Ollama Base URL",
+      "placeholder": "http://localhost:11434",
+      "hint": "Optional: Base URL for your Ollama instance",
+      "required": false,
+      "env_variable": "OLLAMA_BASE_URL"
+    },
+    {
+      "type": "text",
+      "label": "OpenRouter API Key",
+      "placeholder": "sk-or-...",
+      "hint": "Optional: Your OpenRouter API key",
+      "required": false,
+      "env_variable": "OPENROUTER_API_KEY"
+    },
+    {
+      "type": "text",
+      "label": "Gemini API Key",
+      "placeholder": "AI...",
+      "hint": "Optional: Your Google Gemini API key",
+      "required": false,
+      "env_variable": "GEMINI_API_KEY"
+    }
+  ],
+  "supported_architectures": ["arm64", "amd64"],
+  "created_at": 1736342400000,
+  "updated_at": 1736342400000,
+  "min_tipi_version": "4.0.0"
+}
