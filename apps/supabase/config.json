@@ -8,7 +8,7 @@
   "description": "The open source Firebase alternative. Supabase gives you a dedicated Postgres database to build your web, mobile, and AI applications.",
   "tipi_version": 3,
   "version": "latest",
-  "categories": ["development", "database"],
+  "categories": ["development"],
   "short_desc": "Open source Firebase alternative with Postgres database, authentication, and real-time features.",
   "author": "Supabase",
   "source": "https://github.com/supabase/supabase",
