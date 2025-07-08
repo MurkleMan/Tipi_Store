@@ -1,0 +1,109 @@
+{
+  "name": "Supabase",
+  "available": true,
+  "port": 8000,
+  "exposable": true,
+  "dynamic_config": true,
+  "id": "supabase",
+  "description": "The open source Firebase alternative. Supabase gives you a dedicated Postgres database to build your web, mobile, and AI applications.",
+  "tipi_version": 3,
+  "version": "latest",
+  "categories": ["development", "database"],
+  "short_desc": "Open source Firebase alternative with Postgres database, authentication, and real-time features.",
+  "author": "Supabase",
+  "source": "https://github.com/supabase/supabase",
+  "website": "https://supabase.com",
+  "form_fields": [
+    {
+      "type": "text",
+      "label": "Site URL",
+      "placeholder": "http://localhost:3000",
+      "hint": "The base URL of your site",
+      "required": true,
+      "env_variable": "SITE_URL"
+    },
+    {
+      "type": "text",
+      "label": "JWT Secret",
+      "placeholder": "super-secret-jwt-token-with-at-least-32-characters-long",
+      "hint": "A random string used to sign JWT tokens (must be at least 32 characters)",
+      "required": true,
+      "env_variable": "JWT_SECRET"
+    },
+    {
+      "type": "text",
+      "label": "Postgres Password",
+      "placeholder": "your-super-secret-and-long-postgres-password",
+      "hint": "Password for the postgres user",
+      "required": true,
+      "env_variable": "POSTGRES_PASSWORD"
+    },
+    {
+      "type": "text",
+      "label": "Anon Key",
+      "placeholder": "Generated from JWT Secret",
+      "hint": "Anonymous access key (generate using JWT secret)",
+      "required": true,
+      "env_variable": "ANON_KEY"
+    },
+    {
+      "type": "text",
+      "label": "Service Role Key",
+      "placeholder": "Generated from JWT Secret",
+      "hint": "Service role key (generate using JWT secret)",
+      "required": true,
+      "env_variable": "SERVICE_ROLE_KEY"
+    },
+    {
+      "type": "text",
+      "label": "Dashboard Username",
+      "placeholder": "supabase",
+      "hint": "Username for accessing Supabase Studio",
+      "required": true,
+      "env_variable": "DASHBOARD_USERNAME"
+    },
+    {
+      "type": "text",
+      "label": "Dashboard Password",
+      "placeholder": "this_password_is_insecure_and_should_be_updated",
+      "hint": "Password for accessing Supabase Studio",
+      "required": true,
+      "env_variable": "DASHBOARD_PASSWORD"
+    },
+    {
+      "type": "text",
+      "label": "SMTP Host",
+      "placeholder": "smtp.gmail.com",
+      "hint": "SMTP server hostname for email functionality",
+      "required": false,
+      "env_variable": "SMTP_HOST"
+    },
+    {
+      "type": "text",
+      "label": "SMTP Port",
+      "placeholder": "587",
+      "hint": "SMTP server port",
+      "required": false,
+      "env_variable": "SMTP_PORT"
+    },
+    {
+      "type": "text",
+      "label": "SMTP User",
+      "placeholder": "your-email@gmail.com",
+      "hint": "SMTP username",
+      "required": false,
+      "env_variable": "SMTP_USER"
+    },
+    {
+      "type": "text",
+      "label": "SMTP Password",
+      "placeholder": "your-smtp-password",
+      "hint": "SMTP password",
+      "required": false,
+      "env_variable": "SMTP_PASS"
+    }
+  ],
+  "supported_architectures": ["amd64", "arm64"],
+  "created_at": 1691943801422,
+  "updated_at": 1729872794208
+}
